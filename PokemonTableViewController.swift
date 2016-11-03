@@ -8,14 +8,6 @@
 
 import UIKit
 
-class Pokemon: NSObject {
-    
-    var id: Int = 0
-    var name: String!
-    var imageURL: String!
-    
-}
-
 class PokemonTableViewController: UITableViewController {
     
     var pokemons : [Pokemon]!
@@ -27,7 +19,7 @@ class PokemonTableViewController: UITableViewController {
             
     }
         
-        fileprivate func populateTableView() {
+         func populateTableView() {
             
             self.pokemons = [Pokemon]()
             
@@ -35,7 +27,7 @@ class PokemonTableViewController: UITableViewController {
             
             let url = URL(string: pokemonsURL)
             
-            DispatchQueue.main.async {
+        
             
                 URLSession.shared.dataTask(with: url!) { (data : Data?, response: URLResponse?, error: Error?) in
                     
@@ -56,18 +48,11 @@ class PokemonTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                     
-                }.resume()
-            }
+                    }.resume()
             
             
-        }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
+            
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -95,9 +80,18 @@ class PokemonTableViewController: UITableViewController {
         cell.textLabel?.text = pokemon.name
         cell.detailTextLabel?.text = "\(pokemon.id)"
         
-        let imageData = try! Data(contentsOf: URL(string: pokemon.imageURL)!)
+        DispatchQueue.global().async {
+            
+           let imageData = try! Data(contentsOf: URL(string: pokemon.imageURL)!)
+            
+            DispatchQueue.main.async {
+                cell.imageView?.image = UIImage(data: imageData)
+            }
+        }
         
-        cell.imageView?.image = UIImage(data: imageData)
+        
+        
+        
 
         return cell
     }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vP2-bZ-9UQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="af2-ZL-N0k">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pokemon Table View Controller-->
+        <!--POKEMON-->
         <scene sceneID="gGd-0m-qg2">
             <objects>
                 <tableViewController id="lsD-TF-Ewn" customClass="PokemonTableViewController" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,18 +19,18 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vtg-fT-3gn" id="D40-e9-yB7">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0NX-Xa-win">
-                                            <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
+                                            <frame key="frameInset" minX="15" minY="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5tt-ZF-BTj">
-                                            <frame key="frameInset" minX="15" minY="25" width="44" height="15"/>
+                                            <frame key="frameInset" minX="15" minY="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -45,11 +45,44 @@
                             <outlet property="delegate" destination="lsD-TF-Ewn" id="av2-N6-2Ev"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ffs-Ib-8EL"/>
+                    <navigationItem key="navigationItem" title="POKEMON" id="ffs-Ib-8EL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AS-KF-wn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048.8" y="-618.44077961019491"/>
+            <point key="canvasLocation" x="1988" y="-618.44077961019491"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="bcz-3I-sRe">
+            <objects>
+                <viewController id="GJQ-fr-f5n" customClass="MapsViewController" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zUo-a5-QQr"/>
+                        <viewControllerLayoutGuide type="bottom" id="CaS-4h-HWa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZJ-Ot-K1u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mbD-33-8Jl"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CaS-4h-HWa" firstAttribute="top" secondItem="mbD-33-8Jl" secondAttribute="bottom" constant="1" id="9X3-Tk-Qsr"/>
+                            <constraint firstItem="mbD-33-8Jl" firstAttribute="leading" secondItem="oZJ-Ot-K1u" secondAttribute="leading" id="BSI-25-2Jg"/>
+                            <constraint firstAttribute="trailing" secondItem="mbD-33-8Jl" secondAttribute="trailing" id="H86-au-yj6"/>
+                            <constraint firstItem="mbD-33-8Jl" firstAttribute="top" secondItem="zUo-a5-QQr" secondAttribute="bottom" constant="8" symbolic="YES" id="pfl-oC-cd1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rfA-Ed-3wy">
+                        <barButtonItem key="rightBarButtonItem" title="Add New Pokemon" id="T3o-TD-5zr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="mbD-33-8Jl" id="e9K-sC-GHO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ao-CX-nch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="-123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6VN-R3-x0B">
@@ -67,7 +100,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYP-W6-kMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="-618.44077961019491"/>
+            <point key="canvasLocation" x="1048.8" y="-618.44077961019491"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mRv-2l-FdC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="af2-ZL-N0k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ze-Zw-b1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GJQ-fr-f5n" kind="relationship" relationship="rootViewController" id="TId-Vk-3U0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hW8-iz-9Su" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690.39999999999998" y="-123.68815592203899"/>
         </scene>
     </scenes>
 </document>
