@@ -15,6 +15,8 @@
 		CEAB11F01DC9FCA000055ED7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB11EF1DC9FCA000055ED7 /* MapsViewController.swift */; };
 		CEAB11F21DCA037D00055ED7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB11F11DCA037D00055ED7 /* Pokemon.swift */; };
 		CEAB11F41DCA0E8100055ED7 /* PokemonAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB11F31DCA0E8100055ED7 /* PokemonAnnotationView.swift */; };
+		CEAB11F61DCAD4BF00055ED7 /* AddPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB11F51DCAD4BF00055ED7 /* AddPokemonViewController.swift */; };
+		CEFACBB11DCD03E7008E7D6E /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFACBB01DCD03E7008E7D6E /* PokemonAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CEAB11EF1DC9FCA000055ED7 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		CEAB11F11DCA037D00055ED7 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		CEAB11F31DCA0E8100055ED7 /* PokemonAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAnnotationView.swift; sourceTree = "<group>"; };
+		CEAB11F51DCAD4BF00055ED7 /* AddPokemonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPokemonViewController.swift; sourceTree = "<group>"; };
+		CEFACBB01DCD03E7008E7D6E /* PokemonAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			children = (
 				CE9F3D6B1DC827830087EBBC /* AppDelegate.swift */,
 				CE9F3D6F1DC827830087EBBC /* Main.storyboard */,
+				CEAB11F51DCAD4BF00055ED7 /* AddPokemonViewController.swift */,
 				CEAB11EF1DC9FCA000055ED7 /* MapsViewController.swift */,
 				CEAB11F11DCA037D00055ED7 /* Pokemon.swift */,
 				CE9F3D7D1DC841C60087EBBC /* PokemonTableViewController.swift */,
@@ -69,6 +74,7 @@
 				CE9F3D721DC827840087EBBC /* Assets.xcassets */,
 				CE9F3D741DC827840087EBBC /* LaunchScreen.storyboard */,
 				CE9F3D771DC827840087EBBC /* Info.plist */,
+				CEFACBB01DCD03E7008E7D6E /* PokemonAnnotation.swift */,
 			);
 			path = Pokemon;
 			sourceTree = "<group>";
@@ -148,8 +154,10 @@
 			files = (
 				CEAB11F01DC9FCA000055ED7 /* MapsViewController.swift in Sources */,
 				CEAB11F41DCA0E8100055ED7 /* PokemonAnnotationView.swift in Sources */,
+				CEFACBB11DCD03E7008E7D6E /* PokemonAnnotation.swift in Sources */,
 				CEAB11F21DCA037D00055ED7 /* Pokemon.swift in Sources */,
 				CE9F3D7E1DC841C60087EBBC /* PokemonTableViewController.swift in Sources */,
+				CEAB11F61DCAD4BF00055ED7 /* AddPokemonViewController.swift in Sources */,
 				CE9F3D6C1DC827830087EBBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

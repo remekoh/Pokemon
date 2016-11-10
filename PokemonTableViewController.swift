@@ -38,7 +38,7 @@ class PokemonTableViewController: UITableViewController {
                         let pokemon = Pokemon()
                         pokemon.id = item["id"] as! Int
                         pokemon.name = item["name"] as! String
-                        pokemon.imageURL = item["imageURL"] as! String
+                        pokemon.imageURL = item["imageURL"] as? String
                         
                         self.pokemons.append(pokemon)
                         
@@ -48,7 +48,7 @@ class PokemonTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                     
-                    }.resume()
+                }.resume()
             
             
             
@@ -82,7 +82,7 @@ class PokemonTableViewController: UITableViewController {
         
         DispatchQueue.global().async {
             
-           let imageData = try! Data(contentsOf: URL(string: pokemon.imageURL)!)
+           let imageData = try! Data(contentsOf: URL(string: pokemon.imageURL!)!)
             
             DispatchQueue.main.async {
                 cell.imageView?.image = UIImage(data: imageData)

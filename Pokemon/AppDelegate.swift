@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
+    
+    var locationManager: CLLocationManager!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
